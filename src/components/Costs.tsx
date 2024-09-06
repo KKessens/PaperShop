@@ -13,7 +13,7 @@ const Costs = ({ color }: Props) => {
 
   // handles clicks
   const handleClick = () => {
-    
+    console.log(trigger);
     // Update the state to trigger a re-render
     setTrigger((prev) => prev + 1);
   };
