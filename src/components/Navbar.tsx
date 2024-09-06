@@ -1,6 +1,7 @@
 import "./Navbar.css";
 import "./Dropdown.tsx";
 import Dropdown from "./Dropdown.tsx";
+import logo from "../Images/EconGameLogo.png";
 
 // Navigation Bar at the top of the screen
 const Navbar = () => {
@@ -14,7 +15,7 @@ const Navbar = () => {
         <div className="container-fluid">
           <img
             // Displays the logo
-            src="./Images/EconGameLogo.png"
+            src={logo}
             style={{ width: "40vh", height: "auto", marginLeft: "25vh" }}
             alt="Econ Game Logo"
           />
