@@ -20,6 +20,8 @@ const DayProfits = ({ trigger }: Props) => {
               className="col"
               style={{
                 backgroundColor: day === 1 ? "#40407a" : "#2c2c5b",
+                width: "25vh",
+                
               }}
             >
               <h1>Monday</h1>
@@ -46,6 +48,7 @@ const DayProfits = ({ trigger }: Props) => {
               className="col"
               style={{
                 backgroundColor: day === 2 ? "#40407a" : "#2c2c5b",
+                width: "25vh",
               }}
             >
               <h1>Tuesday</h1>
@@ -72,6 +75,7 @@ const DayProfits = ({ trigger }: Props) => {
               className="col"
               style={{
                 backgroundColor: day === 3 ? "#40407a" : "#2c2c5b",
+                width: "30vh",
               }}
             >
               <h1>Wednesday</h1>
@@ -98,6 +102,7 @@ const DayProfits = ({ trigger }: Props) => {
               className="col"
               style={{
                 backgroundColor: day === 4 ? "#40407a" : "#2c2c5b",
+                width: "25vh",
               }}
             >
               <h1>Thursday</h1>
@@ -124,6 +129,7 @@ const DayProfits = ({ trigger }: Props) => {
               className="col"
               style={{
                 backgroundColor: day === 5 ? "#40407a" : "#2c2c5b",
+                width: "22vh",
               }}
             >
               <h1>Friday</h1>
