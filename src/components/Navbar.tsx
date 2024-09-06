@@ -14,7 +14,7 @@ const Navbar = () => {
         <div className="container-fluid">
           <img
             // Displays the logo
-            src="src/Images/EconGameLogo.png"
+            src="./src/Images/EconGameLogo.png"
             style={{ width: "40vh", height: "auto", marginLeft: "25vh" }}
             alt="Econ Game Logo"
           />
