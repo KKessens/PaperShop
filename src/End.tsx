@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Import Bootstrap JS
+import React, { useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Import Bootstrap JS
 
 interface EndProps {
   trigger: number; // Define the prop type
@@ -8,29 +8,32 @@ interface EndProps {
 
 const End: React.FC<EndProps> = ({ trigger }) => {
   const updateHighScore = () => {
-    let currScore = parseInt(sessionStorage.getItem('FTProfit') ?? '-1000000', 10)
-    let highscore = parseInt(localStorage.getItem('highscore') ?? currScore.toString(),10)
-    console.log("current: " + currScore)
-    console.log("high: " + highscore)
+    let currScore = parseInt(
+      sessionStorage.getItem("FTProfit") ?? "-1000000",
+      10
+    );
+    let highscore = parseInt(
+      localStorage.getItem("highscore") ?? currScore.toString(),
+      10
+    );
 
     if (currScore > highscore) {
-      highscore = currScore
+      highscore = currScore;
     }
 
-    localStorage.setItem('highscore', highscore.toString())
+    localStorage.setItem("highscore", highscore.toString());
 
-    return highscore
-  }
-
+    return highscore;
+  };
 
   useEffect(() => {
-    const day = parseInt(sessionStorage.getItem('Day') ?? '0', 10);
+    const day = parseInt(sessionStorage.getItem("Day") ?? "0", 10);
 
     if (day > 5) {
       // Use Bootstrap's Modal via direct import
-      const modalElement = document.getElementById('staticBackdrop');
+      const modalElement = document.getElementById("staticBackdrop");
       if (modalElement) {
-        import('bootstrap').then(({ Modal }) => {
+        import("bootstrap").then(({ Modal }) => {
           const modal = new Modal(modalElement);
           modal.show();
         });
@@ -54,31 +57,34 @@ const End: React.FC<EndProps> = ({ trigger }) => {
         aria-hidden="true"
       >
         <div className="modal-dialog modal-dialog-centered">
-          <div className="modal-content"  style = {{backgroundColor: '#CCCCCC'}}>
+          <div className="modal-content" style={{ backgroundColor: "#CCCCCC" }}>
             <div
               className="modal-header"
               style={{
-                display: 'flex',
-                justifyContent: 'center', // Center the content horizontally
+                display: "flex",
+                justifyContent: "center", // Center the content horizontally
               }}
             >
-              <h1 className="modal-title fs-5" id="staticBackdropLabel">End of the week!</h1>
+              <h1 className="modal-title fs-5" id="staticBackdropLabel">
+                End of the week!
+              </h1>
             </div>
-            
+
             <div className="modal-body">
-              <p  style={{display: 'flex', justifyContent: 'center'}}>
-              {"Final profit: " + parseInt(sessionStorage.getItem('FTProfit') ?? '0', 10)}
+              <p style={{ display: "flex", justifyContent: "center" }}>
+                {"Final profit: " +
+                  parseInt(sessionStorage.getItem("FTProfit") ?? "0", 10)}
               </p>
-              <p  style={{display: 'flex', justifyContent: 'center'}}>
+              <p style={{ display: "flex", justifyContent: "center" }}>
                 {"Highscore: " + updateHighScore()}
               </p>
             </div>
-            
+
             <div
               className="modal-footer"
               style={{
-                display: 'flex',
-                justifyContent: 'center', // Center the button horizontally
+                display: "flex",
+                justifyContent: "center", // Center the button horizontally
               }}
             >
               <button

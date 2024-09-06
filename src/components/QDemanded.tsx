@@ -50,7 +50,6 @@ export const getActualRevenue = () => {
 
 const QDemanded = ({ color }: Props) => {
   const [trigger, setTrigger] = useState(0);
-  console.log(trigger)
 
   const handleClick = () => {
     // Update the state to trigger a re-render

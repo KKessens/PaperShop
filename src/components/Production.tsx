@@ -8,7 +8,7 @@ interface Props {
 
 const Production = ({ color }: Props) => {
   const [trigger, setTrigger] = useState(0);
-  console.log(trigger);
+  
 
   const handleClick = () => {
     // Update the state to trigger a re-render

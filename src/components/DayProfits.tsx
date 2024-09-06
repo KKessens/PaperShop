@@ -7,7 +7,6 @@ interface Props {
 
 // Displays information from each day of the week
 const DayProfits = ({ trigger }: Props) => {
-  console.log(trigger);
   const day = parseInt(sessionStorage.getItem("Day") ?? "0", 10); // Retrieve the current day from sessionStorage
 
   return (
@@ -21,7 +20,6 @@ const DayProfits = ({ trigger }: Props) => {
               style={{
                 backgroundColor: day === 1 ? "#40407a" : "#2c2c5b",
                 width: "25vh",
-                
               }}
             >
               <h1>Monday</h1>
